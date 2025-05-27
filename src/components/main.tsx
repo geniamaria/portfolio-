@@ -1,6 +1,7 @@
 "use client";
 import { Header } from "./header";
 import { zodResolver } from "@hookform/resolvers/zod";
+
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "./ui/button";
@@ -37,6 +38,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "./ui/carousel";
+import { PhoneCall } from "@phosphor-icons/react";
 
 export const Main = () => {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -47,24 +49,28 @@ export const Main = () => {
   });
   return (
     <>
-      <div>
+      <div className="bg-black">
         <Header />
         <main>
-          <h1 className="m-5  font-bold">I'M Maria Genia Abilio Moiane</h1>
-          <p className="m-5 font-normal">Junior full stack Developer</p>
-          <div className="card card-dash bg-sky-500 w-96 m-5">
-            <img
-              src="./img/logo.jpg"
-              width={400}
-              height={200}
-              className="mx-auto"
-            />
+          <h2 className="text-subtitles text-white m-5">
+            Junior full <br />
+            stack Developer
+          </h2>
+
+          <div className="card card-dash  w-96 m-auto">
+            <img src="./img/logo.jpg" />
           </div>
 
           <section className="card card-dash bg-sky-500 w-96 m-5">
             <div className="card-body">
-              <h2 className="card-title">Sobre mim</h2>
-              <p>
+              <h2
+                className="text-subtitle text-white"
+                id="
+              Sobremim"
+              >
+                Sobre mim
+              </h2>
+              <p className="text-paraghraph">
                 Olá! Sou Maria Génia Abílio Moiane, finalista do curso de
                 Engenharia em Tecnologia e Sistemas de Informação, apaixonada
                 por inovação e soluções tecnológicas. Tenho um forte interesse
@@ -80,7 +86,9 @@ export const Main = () => {
           </section>
           <section className="card card-dash bg-sky-500 w-96 m-5">
             <div className="card-body">
-              <h2 className="card-title">Habilidades</h2>
+              <h2 className="text-subtitle text-white" id="Habilidades">
+                Habilidades
+              </h2>
               <p>
                 Figma HTML CSS JAVA TailwindCSS Pacote Microsoft Office
                 TailwindCSS PHP javascript React
@@ -89,7 +97,7 @@ export const Main = () => {
           </section>
           <section className="card card-dash bg-sky-500 w-96 m-5">
             <div className="card-body">
-              <h2 className="card-title">Experiência</h2>
+              <h2 className="text-subtitle text-white">Experiência</h2>
               <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
                 <li>
                   <div className="timeline-middle">
@@ -194,7 +202,9 @@ export const Main = () => {
 
           <section className="card card-dash bg-sky-500 w-96 m-5">
             <div className="card-body">
-              <h2 className="card-title">Porject</h2>
+              <h2 className="text-subtitle text-white" id="Porject">
+                Porject
+              </h2>
               <Carousel className="w-full max-w-sm">
                 <CarouselContent className="-ml-1">
                   {Array.from({ length: 5 }).map((_, index) => (
@@ -221,7 +231,9 @@ export const Main = () => {
           </section>
           <section className="card card-dash bg-sky-500 w-96 m-5">
             <div className="card-body">
-              <h2 className="card-title">Contact</h2>
+              <h2 className="text-subtitle text-white" id="Contact">
+                Contact
+              </h2>
 
               <Form {...form}>
                 <form
@@ -258,6 +270,10 @@ export const Main = () => {
                 </form>
               </Form>
             </div>
+          </section>
+          <section id="Footer" className="text-paraghraph mx-auto text-white">
+            <PhoneCall size={24} /> +258 860453111
+            <p>&copy; Densenvolvido por Maria Genia </p>
           </section>
         </main>
       </div>
