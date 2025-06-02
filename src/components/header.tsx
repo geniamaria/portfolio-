@@ -1,14 +1,14 @@
-import { List } from "@phosphor-icons/react";
+import { ListIcon } from "lucide-react";
 
 export const Header = () => {
   return (
     <>
-      <div className=" flex justify-between m-5 ">
-        <h1 className="text-title text-white"> Maria Génia </h1>
+      <div className=" flex justify-between  ">
+        <h1 className="text-title text-white p-3"> Maria Génia </h1>
         <a href="#my_modal_8" className="btn">
-          <List size={24} />
+          <ListIcon size={24} />
         </a>
-        <div className="modal blue-500" role="dialog" id="my_modal_8">
+        <div className="modal " role="dialog" id="my_modal_8">
           <div className="modal-box">
             <div className="modal-action">
               <div className="mx-auto">

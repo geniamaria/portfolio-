@@ -57,11 +57,14 @@ export const Main = () => {
             stack Developer
           </h2>
 
-          <div className="card card-dash  w-96 m-auto">
-            <img src="./img/logo.jpg" />
+          <div className="card  w-96 m-auto">
+            <img
+              src="./img/bg-img.jpg
+            "
+            />
           </div>
 
-          <section className="card card-dash bg-sky-500 w-96 m-5">
+          <section className="card  w-96 m-5">
             <div className="card-body">
               <h2
                 className="text-subtitle text-white"

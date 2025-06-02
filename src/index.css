@@ -46,7 +46,7 @@
   --radius: 0.625rem;
   --background: oklch(0.96 0.04 203);
   --foreground: oklch(0.145 0 0); /*color na letra*/
-  --card: oklch(0.98 0 248);
+  --card: oklch(oklch(0.3 0.05 230));
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
@@ -126,6 +126,22 @@
     @apply bg-background text-foreground;
   }
 }
+.card {
+  @apply bg-card text-card-foreground;
+}
+.popover {
+  @apply bg-popover text-popover-foreground;
+}
+/*font*/
+.text-link {
+  font-size: var(--font-link);
+}
+.text-link:hover {
+  text-decoration: underline;
+}
+.text-link:focus {
+  text-decoration: underline;
+}
 
 .text-title {
   font-size: var(--font-title);
@@ -136,17 +152,11 @@
 .text-subtitles {
   font-size: var(--font-subtitles);
 }
-.text-paraghraph {
+.text-paragraph {
   font-size: var(--font-paragraph);
 }
-
-/*color*/
-.bg-primary {
-  background-color: var(--color-primary);
-}
-
 .text-color {
-  color: var(--color-text);
+  color: var(--foreground);
 }
 
 .icons-color {
