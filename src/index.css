@@ -77,7 +77,7 @@
   --sidebar-ring: oklch(0.708 0 0);
 
   /*fontes*/
-  --font-title: 3rem;
+  --font-title: 2.5rem;
   --font-subtitle: 2.5rem;
   --font-subtitles: 2rem;
   --font-link: 1.5rem;
@@ -118,20 +118,6 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-.card {
-  @apply bg-card text-card-foreground;
-}
-.popover {
-  @apply bg-popover text-popover-foreground;
-}
 /*font*/
 .text-link {
   font-size: var(--font-link);
